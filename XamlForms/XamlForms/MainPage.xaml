@@ -4,8 +4,22 @@
              xmlns:local="clr-namespace:XamlForms"
              x:Class="XamlForms.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+	<!--<Label Text="Welcome to Xamarin Forms!" 
            VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+           HorizontalOptions="Center" />-->
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="0, 20, 0, 0" />
+  </ContentPage.Padding>
+  <StackLayout Padding="8">
+    <Label x:Name="totalPriceText"
+           Text="Total"
+           HorizontalTextAlignment="Center"
+           FontSize="40"/>
+    <Entry x:Name="priceText"
+           Placeholder="Input price"/>
+    <Button x:Name="calcButton"
+            Text="計算"/>
+  </StackLayout>
 
 </ContentPage>

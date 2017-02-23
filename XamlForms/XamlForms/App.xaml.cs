@@ -13,8 +13,9 @@ namespace XamlForms
 		{
 			InitializeComponent();
 
-			MainPage = new XamlForms.MainPage();
-		}
+            MainPage = new XamlForms.MainPage();
+           // MainPage = new CalcPage();
+        }
 
 		protected override void OnStart ()
 		{

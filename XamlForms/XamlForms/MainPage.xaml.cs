@@ -12,6 +12,14 @@ namespace XamlForms
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+            calcButton.Clicked += (sender, e) =>
+            {
+                double d = 0d;
+                if (double.TryParse(priceText.Text, out d))
+                {
+                    totalPriceText.Text = $"{XamlForms.Calc.GetTax(d)}円";
+                }
+            };
+        }
 	}
 }
