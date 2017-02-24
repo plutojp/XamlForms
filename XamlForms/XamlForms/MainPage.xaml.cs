@@ -9,7 +9,8 @@ namespace XamlForms
 {
 	public partial class MainPage : ContentPage
 	{
-		public MainPage()
+
+        public MainPage()
 		{
 			InitializeComponent();
             calcButton.Clicked += (sender, e) =>
